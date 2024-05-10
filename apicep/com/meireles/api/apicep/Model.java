@@ -1,5 +1,6 @@
 package com.meireles.api.apicep;
 
+//@Model
 public class Model {
 	private String cep;
 	private String logradouro;
