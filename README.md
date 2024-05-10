@@ -1,2 +1,2 @@
 # com.meireles.api
-Repository of api made with eclipse
+Repository of api made with maven eclipse project
