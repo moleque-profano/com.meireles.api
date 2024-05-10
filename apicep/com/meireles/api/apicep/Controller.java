@@ -12,10 +12,11 @@ import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+//@Controller
 public class Controller {
 	private Model model;
 	
-	
+	//Classe para consultar o cep e retornar o arquivo JSON
 	public String configurarApi(String cep) {
 		String json = "";
 		try {
@@ -39,7 +40,8 @@ public class Controller {
 		return json;
 		
 	}
-	
+
+	//Classe para pegar os dados do arquivo JSON e armazenar no ArrayList
 	public void manipularJson(String json) {
 		try {
 			JSONObject jsonObject = new JSONObject(json);
@@ -60,11 +62,10 @@ public class Controller {
 			System.out.println("Arquivo JSON Não Encontrado!");
 		}
 		
-	}
+	}	
 	
 	
-	
-	
+	//Classe principal 
 	public Controller(String cep, Model model) {
 		this.model = model;
 		manipularJson(configurarApi(cep));
